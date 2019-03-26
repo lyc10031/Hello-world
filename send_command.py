@@ -64,13 +64,15 @@ def send_command():
             command_reboot = f'/sbin/reboot'
             ssh.exec_command(command_reboot)
         except:
-            print(f' * {host} cannot be connected !!!')
+            print(f"\033[1;31m * {host} cannot be connected !!!\033[0m")
+#            print(f' * {host} cannot be connected !!!')
             time.sleep(0.2)
         finally:
             ssh.close()
 
     else:
-        print(f'{host} cannot be connect !!!') 
+        print(f"\033[1;31m {host} cannot be connected !!!\033[0m")
+#        print(f'{host} cannot be connect !!!') 
 
 
 def split_host_info(host_info):
@@ -101,7 +103,6 @@ def main(WORD_THREAD):
 
 def call():
     host_info = get_host_info()
-    # IP_QUEUE = Queue() 
     WORD_THREAD = len(host_info)
     [IP_QUEUE.put(i) for i in host_info]
     try:
@@ -111,10 +112,5 @@ def call():
 
 
 if __name__ == '__main__':
-#     # host_info = get_host_info()
-#     # IP_QUEUE = Queue() 
-#     # WORD_THREAD = 10
-#     # [IP_QUEUE.put(i) for i in host_info]
-#     # main()
     call()
-#     # print('asdasd')
+
