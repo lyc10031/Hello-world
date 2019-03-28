@@ -88,8 +88,8 @@ if __name__ == '__main__':
 #        print('Usage: python3 control.py (Testing_frequency) (Execution_interval)')
         print('Usage: \033[1;34;40mpython3 control.py (Testing_frequency) (Execution_interval)\033[0m')
     else:
-	test_times, inerval= args[1:]
+        test_times, inerval= args[1:]
         with open("PID.txt",'w') as f:
             print(os.getpid(),file=f)	
-	main(test_times,inerval)
+	    main(test_times,inerval)
 
