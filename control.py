@@ -93,4 +93,3 @@ if __name__ == '__main__':
 			print(os.getpid(),file=f)	
 
 		main(test_times,inerval)
-
