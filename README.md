@@ -9,4 +9,4 @@ This script pings some of IP address then send commands to those can be connecte
 There is also a script with the same functionality, which is implemented using the asyncio module.
 
 
-https://github.com/lyc10031/pull-test
+https://github.com/lyc10031/PY-asyncio-remote-command
