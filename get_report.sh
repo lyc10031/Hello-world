@@ -11,5 +11,4 @@ for i in `ls run_result/*.txt`
 do
 awk -F ' ' '{print $4,"<->",$5,$6 }' $i  | grep OK | tail -n 1
 done
-
 fi
