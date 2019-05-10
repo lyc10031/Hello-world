@@ -1,8 +1,8 @@
 #!/bin/bash
 #usage：
-./get_report              ## read run_result 
-or
-./get_report result-1     ## read result-1
+#     ./get_report              ## read run_result 
+#     or
+#     ./get_report result-1     ## read result-1
 
 if [ $# == 1 ];then
 for i in `ls $1/*.txt`
