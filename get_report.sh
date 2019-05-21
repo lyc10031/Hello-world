@@ -3,7 +3,7 @@
 #     ./get_report              ## read run_result 
 #     or
 #     ./get_report result-1     ## read result-1
-if [ ! -f "run_result" ];then
+if [ ! -d "run_result" ];then
 echo "run_result did not exit !!!"
 exit 2
 fi
